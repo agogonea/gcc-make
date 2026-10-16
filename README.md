@@ -445,32 +445,6 @@ Finally, use your `clean` target and verify that the generated executable and an
 - Incremental builds.
 - Testing a Makefile from a clean state.
 
----
-
-## Final Challenge
-
-Choose one of the projects and improve its Makefile.
-
-Your solution should:
-
-1. Use variables for the compiler and compiler flags.
-2. Separate compilation and linking where appropriate.
-3. Declare meaningful prerequisites.
-4. Include a `clean` target.
-5. Use `.PHONY` for action-only targets.
-6. Avoid unnecessary recompilation.
-7. Build correctly from a clean state.
-
-After implementing your changes, test the following scenarios:
-
-- A clean build.
-- Running `make` a second time without changes.
-- Modifying one source file.
-- Modifying a header file.
-- Running `make clean` and building again.
-
-Be prepared to explain not only why the Makefile works, but also why Make decides which commands to execute.
-
 ## Key Takeaway
 
 GCC compiles and links programs. Make automates the build process by tracking targets, prerequisites, and the commands needed to produce them.
