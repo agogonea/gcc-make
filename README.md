@@ -278,12 +278,19 @@ GCC can run all the required stages in one command, but these options let you in
 
 Open `Makefile` and answer the following questions:
 
-- What does the `all` target represent?
-- What is the purpose of the `program` target?
-- What does `main.c` mean in the prerequisites of `program`?
-- What does the recipe passed to GCC do?
-- Why is there a `clean` target?
-- How could you modify the Makefile to use the warning flags and any additional linker options required by the program?
+- What do the `CC` and `CFLAGS` variables represent?
+- What does `$(CC)` mean in a recipe?
+- What does `$(CFLAGS)` expand to?
+- Why does `all` depend on `app`? Which of the two targets creates a file?
+- What are the prerequisites of `app`, and why are they listed?
+- What is the difference between a target that represents a file (`app`) and a target used only to perform an action (`all`, `frumos`, `clean`)? Why are the latter declared `.PHONY`?
+
+Now experiment. `touch <file>` updates a file's modification time without changing its content, so it is a quick way to simulate an edit.
+
+1. Run `make`, then run it again without changing anything. Why does the second run do nothing?
+2. Run `touch math_ops.c`, then `make`. How many source files are recompiled? Was that necessary?
+3. Run `touch math_ops.h`, then `make`. Is the executable rebuilt? Should it be? What does this tell you about the prerequisites of `app`?
+4. Run `make frumos`. Why is its message not printed by a plain `make`?
 
 Run the Makefile and compare its behavior with your manual compilation command.
 
