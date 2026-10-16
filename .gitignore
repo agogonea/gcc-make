@@ -1,0 +1,5 @@
+app
+program
+*.o
+*.i
+*.s

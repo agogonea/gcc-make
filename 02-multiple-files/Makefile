@@ -3,7 +3,9 @@ CFLAGS = -Wall -Wextra
 
 .PHONY: frumos clean all
 
-all: main.c math_ops.c frumos
+all: app
+
+app: main.c math_ops.c
 	$(CC) $(CFLAGS) main.c math_ops.c -o app
 
 frumos:

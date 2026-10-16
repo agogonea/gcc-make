@@ -37,6 +37,10 @@ make --version
 
 If either command is unavailable, install the corresponding package using your distribution's package manager.
 
+```bash
+sudo apt install build-essential
+```
+
 ## Introductory Theory
 
 ### 1. What is GCC?
